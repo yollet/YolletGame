@@ -142,9 +142,9 @@ void GongJi(ZhuRG *yollet, int n)
             }
             break;
         case 2:{
-            printf("你碰到了 ˚¬˚ 盛辰，他好像很厉害\n");
+            printf("你碰到了 ˚¬˚ 领主，他好像很厉害\n");
             while (g2 > 0) {
-                printf("˚¬˚ 盛辰 血量%d 防御5 攻击10\n", g2);
+                printf("˚¬˚ 领主 血量%d 防御5 攻击10\n", g2);
                 printf("%s%s你的血量：%d 剩余魔法：%d\n", yollet->touxiang, yollet->name, yollet->xueliang, yollet->mofa);
                 printf("选择攻击方法：1.平A  2.法术  3.道具\n");
                 scanf("%d", &c);
@@ -160,7 +160,7 @@ void GongJi(ZhuRG *yollet, int n)
                     ShiYongDaoJu(yollet);
                 }
                 else {
-                    printf("%s%s想要逃跑，被盛辰一把抓住，投了一个漂亮的三分，生命-100\n", yollet->touxiang, yollet->name);
+                    printf("%s%s想要逃跑，被领主一把抓住，投了一个漂亮的三分，生命-100\n", yollet->touxiang, yollet->name);
                     yollet->xueliang -= 100;
                     break;
                 }
@@ -168,13 +168,13 @@ void GongJi(ZhuRG *yollet, int n)
                 printf("˚¬˚使用扣篮攻击 你受到%d点伤害\n", 10 - yollet->fangyu);
                 yollet->xueliang = yollet->xueliang - (10 - yollet->fangyu);
                 if(PanDuanXueLiang(yollet) == 0){
-                    printf("你被盛辰抓走了~~\n");
+                    printf("你被领主抓走了~~\n");
                     break;
                 }
                 
             }
             if (g2 <= 0) {
-                printf("˚¬˚ 撤退了, 获得盛辰的篮球 0 ，攻击+10 获得$100\n按d往右走\n");
+                printf("˚¬˚ 撤退了, 获得领主的篮球 0 ，攻击+10 获得$100\n按d往右走\n");
                 yollet->zhuangB->wuQiData = 10;
                 yollet->gongji += yollet->zhuangB->wuQiData;
                 yollet->money +=100;
@@ -364,7 +364,7 @@ void RpgGame(void)
     yollet->zhuangB->kuZiData = 0;
     strcpy(yollet->zhuangB->shiPing, "十字架 †");
     yollet->zhuangB->shiPingData = 0;
-    strcpy(yollet->zhuangB->wuQi, "盛辰的篮球 0");
+    strcpy(yollet->zhuangB->wuQi, "领主的篮球 0");
     yollet->zhuangB->wuQiData = 0;
     yollet->wuP = (WuPing *)malloc(sizeof(WuPing));
     strcpy(yollet->wuP->xueYao, "止血草 Z");
